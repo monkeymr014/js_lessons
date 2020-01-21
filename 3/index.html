@@ -12,7 +12,7 @@
 <div class="text-justify">
     <h1>lesson 1</h1>
     <div id="app" >  
-        <h1>{{heading}}</h1> <!-- hender bars dla obiektu -->
+        <h1>{{heading}}</h1>
         <p>{{text}}</p> 
 
     </div>
@@ -20,17 +20,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
 <script>
 
-    // Tworzenie nowej instancji jako nowe klase
-
      new Vue ({
+       el: "#app", 
+       data : {
 
-                    // trzeba powiedzieć Vue którą część strony ma kontrolować
-       el: "#app",   // odwołanie sie do diva bo selektorze id 
-        data : {    // obiekt - ciało elementów 
-
-            heading: "hello", // nazwy elementów do kóry się odwołujemy
-            text : "text" // oraz ich treść
-        }
+            heading: "hello",
+            text : "text"
+            }
     
      });
 

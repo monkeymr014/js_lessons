@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
+<div class="text-justify">
+    <h1>lesson 1</h1>
+    <div id="app" >  
+        <h1>{{heading}}</h1> <!-- hender bars dla obiektu -->
+        <p>{{text}}</p> 
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+<script>
+
+    // Tworzenie nowej instancji jako nowe klase
+
+     new Vue ({
+
+                    // trzeba powiedzieć Vue którą część strony ma kontrolować
+       el: "#app",   // odwołanie sie do diva bo selektorze id 
+        data : {    // obiekt - ciało elementów 
+
+            heading: "hello", // nazwy elementów do kóry się odwołujemy
+            text : "text" // oraz ich treść
+        }
     
+     });
+
+</script>
 </body>
 </html>
