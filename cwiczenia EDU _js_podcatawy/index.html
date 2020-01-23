@@ -13,15 +13,30 @@
     <div id="aa" class="text-center col-md-4 col-md-offset-4" >
 
         <h1>Losowanie </h1> 
-        <p>Ile liczb losujemy?</p>
-        <input id="hmNumbers" class="input"></input><br/><br/>
-        <button id="getNumbers" class="btn">Losuj liczby</button>
         
-        <br/><br/>
-        <ul id="wynik" class="list-group" >
-            
-        </ul>
+        <div >
+            <p>zakres liczb</p>
+       
+
+            <div class="row"> 
+                <input class="input" size="3" id="minV" size="3"  ></input>
+                <input class="input" size="3" id="maxV" ></input>
+            </div>
+
+        </div>
+        <br/>
         
+        <div id="los">
+            <p>ile liczb losujemy?</p>    
+            <input id="hmNumbers" class="input"></input><br/><br/>
+            <div  id="button" >
+                <button  id="getNumbers" class="btn">Losuj liczby</button>
+            </div>
+        
+            <br/><br/>
+            <ul id="wynik" class="list-group" >        
+            </ul>
+        </div>
     </div>
     
     <script src="js/scripts.js" ></script>
