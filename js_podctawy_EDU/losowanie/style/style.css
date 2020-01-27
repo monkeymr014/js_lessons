@@ -10,8 +10,6 @@
 
 /* Font downloaded from FontsForWeb.com */
 
-
-
 body{
 
     background-image: url('../images/background.jpg') ;
@@ -37,9 +35,14 @@ p{
     font-size: 25px;
 }
 ul li {
+    font-size: 23px;
     color :whitesmoke;
     list-style: none;
-	margin: 0px;
+	margin: 5px;
 	padding: 5;
     float: left;
     }
+    
+
+    
+    
