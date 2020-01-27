@@ -2,11 +2,11 @@
 
 var sbt = document.querySelector("#getNumbers");
 
-var button = document.querySelector("#button");
 
 
 sbt.addEventListener("click", function(){
 
+     
     var hmNumbers = document.querySelector("#hmNumbers").value;
     var min = document.querySelector("#minV").value;
     var max = document.querySelector("#maxV").value;
@@ -18,41 +18,40 @@ sbt.addEventListener("click", function(){
 
     var dc = document.createDocumentFragment();
 
+    var divul = document.querySelector("#divul");
+    var ul = document.createElement("ul");
         for(var i = 0 ; i < hm ; i++){
                 los = Math.floor(Math.random() * (maxv - minv + 1) + minv);
 
-                    var text = document.createTextNode(los);
-                    var ul = document.querySelector("#wynik");
+                    var text = document.createTextNode(los + "|");
                     var li = document.createElement("li");
-
-
                     li.classList.add('list-group-item');
                     li.appendChild(text);
                     dc.appendChild(li);
                     ul.appendChild(dc);
+                    divul.appendChild(ul)
                 }
         sbt.setAttribute("disabled","true");
 
                     var divbutton = document.querySelector("#button");
                     var reset = document.createElement("button");
-                    text2= document.createTextNode("Reset")
+                    text2 = document.createTextNode("Reset")
                     reset.classList.add('btn');
                     reset.appendChild(text2);
                     reset.setAttribute("id","res");
                     divbutton.appendChild(reset);
 
-                    // var resbtn = document.querySelector("#res");
-                    const secondbutton = sbt.nextElementSibling;
+                    var secondbutton = sbt.nextElementSibling;
                     
                     secondbutton.addEventListener("click", function(){
                         
-
-                                                for( var i = 0 ; i  < hm ; i ++){
-
-                                                    ul.removeChild(li);
-                                                }   
-                                                },false);
-                },false ) ;
+                        var hmNum = document.querySelector("#hmNumbers");
+                        ul.remove();
+                        sbt.removeAttribute("disabled");
+                        hmNum.value = "";
+                        reset.remove();               
+                    },false);
+        },false ) ;
                 
                 
                 

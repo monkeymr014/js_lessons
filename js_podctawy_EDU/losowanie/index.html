@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
-    <div id="aa" class="text-center col-md-4 col-md-offset-4" >
-
-        <h1>Losowanie </h1> 
-        
-        <div >
+    <div id="aa" class="text-center col-md-4 col-md-offset-4 navbar transparent ;" >
+        <h1>Losowanie</h1>  
+        <div>
             <p>zakres liczb</p>
-       
-
-            <div class="row"> 
-                <input class="input" size="3" id="minV" size="3"  ></input>
-                <input class="input" size="3" id="maxV" ></input>
+            <div> 
+                <input  size="3" id="minV" size="3"  ></input>
+                <input  size="3" id="maxV" ></input>
             </div>
-
         </div>
         <br/>
-        
         <div id="los">
             <p>ile liczb losujemy?</p>    
-            <input id="hmNumbers" class="input"></input><br/><br/>
-            <div  id="button" >
-                <button  id="getNumbers" class="btn">Losuj liczby</button>
+            <input id="hmNumbers"></input><br/><br/>
+            <div id="button" >
+                <button  id="getNumbers">Losuj liczby</button>
             </div>
-        
             <br/><br/>
-            <div id="divul" >
-                <ul id="wynik" class="list-group" ></ul>
-            </div>
+            <div id="divul"></div>
         </div>
     </div>
-    
     <script src="js/scripts.js" ></script>
 </body>
 </html>

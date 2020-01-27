@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Chapbook';
+	src: url('font/Chapbook.eot');
+	src: local('Chapbook'), url('font/Chapbook.woff') format('woff'), url('font/Chapbook.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_80467">Text with this font applied</p> */
+.fontsforweb_fontid_80467 {
+	font-family: 'Chapbook' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+
+
+body{
+
+    background-image: url('../images/background.jpg') ;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+
+    }
+div{
+    text-align:center;
+
+    }
+
+h1,p{
+    font-family: 'Chapbook';
+    color: whitesmoke;
+    }
+ h1{
+    font-size: 50px;
+    }
+
+p{
+    font-size: 25px;
+}
+ul li {
+    color :whitesmoke;
+    list-style: none;
+	margin: 0px;
+	padding: 5;
+    float: left;
+    }
