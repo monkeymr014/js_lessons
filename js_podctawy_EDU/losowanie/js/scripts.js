@@ -1,53 +1,62 @@
 
+function addCom(maxv,minv){
 
-var sbt = document.querySelector("#getNumbers");
+    var minv = document.querySelector("#minV").value;
+    var maxv = document.querySelector("#maxV").value;
+    console.log(minv);
+    console.log(maxv);
+    return maxv,minv;
+}
+function losowanie(los){
+    var arr = [];
+    for(var i = 0 ; i < 10 ; i++){
+        los = Math.floor(Math.random() * (addCom.maxv - addCom.minv + 1) + addCom.minv);
+        arr.push([los]);
+    }
+    console.log(arr);
+    }
+    
+    var sbt = document.querySelector("#getNumbers").addEventListener("click", function(){
 
-sbt.addEventListener("click", function(){
+    addCom();
+    losowanie();
+
+
+    },false ) ;
+
+// poprawka wyżej
+ 
      
-    var hmNumbers = document.querySelector("#hmNumbers").value;
-    var min = document.querySelector("#minV").value;
-    var max = document.querySelector("#maxV").value;
+   // var hm = document.querySelector("#hmNumbers").parseInt;
+    
 
-    hm = parseInt(hmNumbers);
-    maxv = parseInt(max);
-    minv = parseInt(min);
+   
+    //var dc = document.createDocumentFragment();
 
-    var dc = document.createDocumentFragment();
-
-    var divul = document.querySelector("#divul");
-    var ul = document.createElement("ul");
-        for(var i = 0 ; i < hm ; i++){
-                los = Math.floor(Math.random() * (maxv - minv + 1) + minv);
-
-                    var text = document.createTextNode("|" + los + "|");
-                    var li = document.createElement("li");
-                    li.classList.add('list-group-item');
-                    li.appendChild(text);
-                    dc.appendChild(li);
-                    ul.appendChild(dc);
-                    divul.appendChild(ul)
-                }
+  //  var divul = document.querySelector("#divul");
+//    var ul = document.createElement("ul");
+   
                 
-        sbt.setAttribute("disabled","true");
-                    var divbutton = document.querySelector("#button");
-                    var reset = document.createElement("button");
-                    text2 = document.createTextNode("Reset")
-                    reset.classList.add('btn');
-                    reset.appendChild(text2);
-                    reset.setAttribute("id","res");
-                    divbutton.appendChild(reset);
+  //  /    sbt.setAttribute("disabled","true");
+       //             var divbutton = document.querySelector("#button");
+    //                var reset = document.createElement("button");
+         //           text2 = document.createTextNode("Reset")
+           //         reset.classList.add('btn');
+             //       reset.appendChild(text2);
+               //     reset.setAttribute("id","res");
+                 //   divbutton.appendChild(reset);
 
-                    var secondbutton = sbt.nextElementSibling;
+                   // var secondbutton = sbt.nextElementSibling;
                     
-                    secondbutton.addEventListener("click", function(){
+                   // secondbutton.addEventListener("click", function(){
                         
-                        var hmNum = document.querySelector("#hmNumbers");
-                        ul.remove();
-                        sbt.removeAttribute("disabled");
-                        hmNum.value = "";
-                        reset.remove();               
-                    },false);
-        },false ) ;
+                    //    var hmNum = document.querySelector("#hmNumbers");
+                      //  ul.remove();
+                    //    sbt.removeAttribute("disabled");
+                       // hmNum.value = "";
+                        //reset.remove();               
+                   // },false);
+        
                 
         
         
