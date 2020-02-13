@@ -1,29 +1,43 @@
-
-function addCom(maxv,minv){
-
+var addRang = function (){
+  var zakres = {}
+  zakres.min = function (){
     var minv = document.querySelector("#minV").value;
+    return minv;
+  };
+  zakres.max = function (){
     var maxv = document.querySelector("#maxV").value;
-    console.log(minv);
-    console.log(maxv);
-    return maxv,minv;
-}
+    return maxv;
+  };
+  return zakres;
+};
+
+
 function losowanie(los){
     var arr = [];
-    for(var i = 0 ; i < 10 ; i++){
-        los = Math.floor(Math.random() * (addCom.maxv - addCom.minv + 1) + addCom.minv);
-        arr.push([los]);
-    }
-    console.log(arr);
-    }
+    var z = new addRang;
+    var ma = z.max();
+    var mi = z.min();
+    console.log(ma,mi);
+      for(var i = 0 ; i < 2; i++){
+      var   los = Math.floor(Math.random() * (ma - mi + 1) + mi);
+         console.log(los);
+         arr.push([los]);
+    };
+  };  //return Math.floor(Math.random() * (max - min)) + min;
+
     
     var sbt = document.querySelector("#getNumbers").addEventListener("click", function(){
+      var z = new addRang;
 
-    addCom();
-    losowanie();
+      console.log(z.min(),z.max());
+
+      losowanie();
+   
+      
 
 
-    },false ) ;
-
+  },false ) ;
+  
 // poprawka wyżej
  
      
